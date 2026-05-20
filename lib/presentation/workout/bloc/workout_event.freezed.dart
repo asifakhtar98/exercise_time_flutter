@@ -24,6 +24,8 @@ mixin _$WorkoutEvent {
     required TResult Function() tick,
     required TResult Function() togglePause,
     required TResult Function() stopWorkout,
+    required TResult Function() nextExercise,
+    required TResult Function() previousExercise,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
@@ -32,6 +34,8 @@ mixin _$WorkoutEvent {
     TResult? Function()? tick,
     TResult? Function()? togglePause,
     TResult? Function()? stopWorkout,
+    TResult? Function()? nextExercise,
+    TResult? Function()? previousExercise,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
@@ -40,6 +44,8 @@ mixin _$WorkoutEvent {
     TResult Function()? tick,
     TResult Function()? togglePause,
     TResult Function()? stopWorkout,
+    TResult Function()? nextExercise,
+    TResult Function()? previousExercise,
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -48,6 +54,8 @@ mixin _$WorkoutEvent {
     required TResult Function(Tick value) tick,
     required TResult Function(TogglePause value) togglePause,
     required TResult Function(StopWorkout value) stopWorkout,
+    required TResult Function(NextExercise value) nextExercise,
+    required TResult Function(PreviousExercise value) previousExercise,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
@@ -55,6 +63,8 @@ mixin _$WorkoutEvent {
     TResult? Function(Tick value)? tick,
     TResult? Function(TogglePause value)? togglePause,
     TResult? Function(StopWorkout value)? stopWorkout,
+    TResult? Function(NextExercise value)? nextExercise,
+    TResult? Function(PreviousExercise value)? previousExercise,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
@@ -62,6 +72,8 @@ mixin _$WorkoutEvent {
     TResult Function(Tick value)? tick,
     TResult Function(TogglePause value)? togglePause,
     TResult Function(StopWorkout value)? stopWorkout,
+    TResult Function(NextExercise value)? nextExercise,
+    TResult Function(PreviousExercise value)? previousExercise,
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
 }
@@ -187,6 +199,8 @@ class _$StartWorkoutImpl implements StartWorkout {
     required TResult Function() tick,
     required TResult Function() togglePause,
     required TResult Function() stopWorkout,
+    required TResult Function() nextExercise,
+    required TResult Function() previousExercise,
   }) {
     return startWorkout(exercises, durationSeconds);
   }
@@ -199,6 +213,8 @@ class _$StartWorkoutImpl implements StartWorkout {
     TResult? Function()? tick,
     TResult? Function()? togglePause,
     TResult? Function()? stopWorkout,
+    TResult? Function()? nextExercise,
+    TResult? Function()? previousExercise,
   }) {
     return startWorkout?.call(exercises, durationSeconds);
   }
@@ -211,6 +227,8 @@ class _$StartWorkoutImpl implements StartWorkout {
     TResult Function()? tick,
     TResult Function()? togglePause,
     TResult Function()? stopWorkout,
+    TResult Function()? nextExercise,
+    TResult Function()? previousExercise,
     required TResult orElse(),
   }) {
     if (startWorkout != null) {
@@ -226,6 +244,8 @@ class _$StartWorkoutImpl implements StartWorkout {
     required TResult Function(Tick value) tick,
     required TResult Function(TogglePause value) togglePause,
     required TResult Function(StopWorkout value) stopWorkout,
+    required TResult Function(NextExercise value) nextExercise,
+    required TResult Function(PreviousExercise value) previousExercise,
   }) {
     return startWorkout(this);
   }
@@ -237,6 +257,8 @@ class _$StartWorkoutImpl implements StartWorkout {
     TResult? Function(Tick value)? tick,
     TResult? Function(TogglePause value)? togglePause,
     TResult? Function(StopWorkout value)? stopWorkout,
+    TResult? Function(NextExercise value)? nextExercise,
+    TResult? Function(PreviousExercise value)? previousExercise,
   }) {
     return startWorkout?.call(this);
   }
@@ -248,6 +270,8 @@ class _$StartWorkoutImpl implements StartWorkout {
     TResult Function(Tick value)? tick,
     TResult Function(TogglePause value)? togglePause,
     TResult Function(StopWorkout value)? stopWorkout,
+    TResult Function(NextExercise value)? nextExercise,
+    TResult Function(PreviousExercise value)? previousExercise,
     required TResult orElse(),
   }) {
     if (startWorkout != null) {
@@ -319,6 +343,8 @@ class _$TickImpl implements Tick {
     required TResult Function() tick,
     required TResult Function() togglePause,
     required TResult Function() stopWorkout,
+    required TResult Function() nextExercise,
+    required TResult Function() previousExercise,
   }) {
     return tick();
   }
@@ -331,6 +357,8 @@ class _$TickImpl implements Tick {
     TResult? Function()? tick,
     TResult? Function()? togglePause,
     TResult? Function()? stopWorkout,
+    TResult? Function()? nextExercise,
+    TResult? Function()? previousExercise,
   }) {
     return tick?.call();
   }
@@ -343,6 +371,8 @@ class _$TickImpl implements Tick {
     TResult Function()? tick,
     TResult Function()? togglePause,
     TResult Function()? stopWorkout,
+    TResult Function()? nextExercise,
+    TResult Function()? previousExercise,
     required TResult orElse(),
   }) {
     if (tick != null) {
@@ -358,6 +388,8 @@ class _$TickImpl implements Tick {
     required TResult Function(Tick value) tick,
     required TResult Function(TogglePause value) togglePause,
     required TResult Function(StopWorkout value) stopWorkout,
+    required TResult Function(NextExercise value) nextExercise,
+    required TResult Function(PreviousExercise value) previousExercise,
   }) {
     return tick(this);
   }
@@ -369,6 +401,8 @@ class _$TickImpl implements Tick {
     TResult? Function(Tick value)? tick,
     TResult? Function(TogglePause value)? togglePause,
     TResult? Function(StopWorkout value)? stopWorkout,
+    TResult? Function(NextExercise value)? nextExercise,
+    TResult? Function(PreviousExercise value)? previousExercise,
   }) {
     return tick?.call(this);
   }
@@ -380,6 +414,8 @@ class _$TickImpl implements Tick {
     TResult Function(Tick value)? tick,
     TResult Function(TogglePause value)? togglePause,
     TResult Function(StopWorkout value)? stopWorkout,
+    TResult Function(NextExercise value)? nextExercise,
+    TResult Function(PreviousExercise value)? previousExercise,
     required TResult orElse(),
   }) {
     if (tick != null) {
@@ -441,6 +477,8 @@ class _$TogglePauseImpl implements TogglePause {
     required TResult Function() tick,
     required TResult Function() togglePause,
     required TResult Function() stopWorkout,
+    required TResult Function() nextExercise,
+    required TResult Function() previousExercise,
   }) {
     return togglePause();
   }
@@ -453,6 +491,8 @@ class _$TogglePauseImpl implements TogglePause {
     TResult? Function()? tick,
     TResult? Function()? togglePause,
     TResult? Function()? stopWorkout,
+    TResult? Function()? nextExercise,
+    TResult? Function()? previousExercise,
   }) {
     return togglePause?.call();
   }
@@ -465,6 +505,8 @@ class _$TogglePauseImpl implements TogglePause {
     TResult Function()? tick,
     TResult Function()? togglePause,
     TResult Function()? stopWorkout,
+    TResult Function()? nextExercise,
+    TResult Function()? previousExercise,
     required TResult orElse(),
   }) {
     if (togglePause != null) {
@@ -480,6 +522,8 @@ class _$TogglePauseImpl implements TogglePause {
     required TResult Function(Tick value) tick,
     required TResult Function(TogglePause value) togglePause,
     required TResult Function(StopWorkout value) stopWorkout,
+    required TResult Function(NextExercise value) nextExercise,
+    required TResult Function(PreviousExercise value) previousExercise,
   }) {
     return togglePause(this);
   }
@@ -491,6 +535,8 @@ class _$TogglePauseImpl implements TogglePause {
     TResult? Function(Tick value)? tick,
     TResult? Function(TogglePause value)? togglePause,
     TResult? Function(StopWorkout value)? stopWorkout,
+    TResult? Function(NextExercise value)? nextExercise,
+    TResult? Function(PreviousExercise value)? previousExercise,
   }) {
     return togglePause?.call(this);
   }
@@ -502,6 +548,8 @@ class _$TogglePauseImpl implements TogglePause {
     TResult Function(Tick value)? tick,
     TResult Function(TogglePause value)? togglePause,
     TResult Function(StopWorkout value)? stopWorkout,
+    TResult Function(NextExercise value)? nextExercise,
+    TResult Function(PreviousExercise value)? previousExercise,
     required TResult orElse(),
   }) {
     if (togglePause != null) {
@@ -563,6 +611,8 @@ class _$StopWorkoutImpl implements StopWorkout {
     required TResult Function() tick,
     required TResult Function() togglePause,
     required TResult Function() stopWorkout,
+    required TResult Function() nextExercise,
+    required TResult Function() previousExercise,
   }) {
     return stopWorkout();
   }
@@ -575,6 +625,8 @@ class _$StopWorkoutImpl implements StopWorkout {
     TResult? Function()? tick,
     TResult? Function()? togglePause,
     TResult? Function()? stopWorkout,
+    TResult? Function()? nextExercise,
+    TResult? Function()? previousExercise,
   }) {
     return stopWorkout?.call();
   }
@@ -587,6 +639,8 @@ class _$StopWorkoutImpl implements StopWorkout {
     TResult Function()? tick,
     TResult Function()? togglePause,
     TResult Function()? stopWorkout,
+    TResult Function()? nextExercise,
+    TResult Function()? previousExercise,
     required TResult orElse(),
   }) {
     if (stopWorkout != null) {
@@ -602,6 +656,8 @@ class _$StopWorkoutImpl implements StopWorkout {
     required TResult Function(Tick value) tick,
     required TResult Function(TogglePause value) togglePause,
     required TResult Function(StopWorkout value) stopWorkout,
+    required TResult Function(NextExercise value) nextExercise,
+    required TResult Function(PreviousExercise value) previousExercise,
   }) {
     return stopWorkout(this);
   }
@@ -613,6 +669,8 @@ class _$StopWorkoutImpl implements StopWorkout {
     TResult? Function(Tick value)? tick,
     TResult? Function(TogglePause value)? togglePause,
     TResult? Function(StopWorkout value)? stopWorkout,
+    TResult? Function(NextExercise value)? nextExercise,
+    TResult? Function(PreviousExercise value)? previousExercise,
   }) {
     return stopWorkout?.call(this);
   }
@@ -624,6 +682,8 @@ class _$StopWorkoutImpl implements StopWorkout {
     TResult Function(Tick value)? tick,
     TResult Function(TogglePause value)? togglePause,
     TResult Function(StopWorkout value)? stopWorkout,
+    TResult Function(NextExercise value)? nextExercise,
+    TResult Function(PreviousExercise value)? previousExercise,
     required TResult orElse(),
   }) {
     if (stopWorkout != null) {
@@ -635,4 +695,272 @@ class _$StopWorkoutImpl implements StopWorkout {
 
 abstract class StopWorkout implements WorkoutEvent {
   const factory StopWorkout() = _$StopWorkoutImpl;
+}
+
+/// @nodoc
+abstract class _$$NextExerciseImplCopyWith<$Res> {
+  factory _$$NextExerciseImplCopyWith(
+    _$NextExerciseImpl value,
+    $Res Function(_$NextExerciseImpl) then,
+  ) = __$$NextExerciseImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NextExerciseImplCopyWithImpl<$Res>
+    extends _$WorkoutEventCopyWithImpl<$Res, _$NextExerciseImpl>
+    implements _$$NextExerciseImplCopyWith<$Res> {
+  __$$NextExerciseImplCopyWithImpl(
+    _$NextExerciseImpl _value,
+    $Res Function(_$NextExerciseImpl) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of WorkoutEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NextExerciseImpl implements NextExercise {
+  const _$NextExerciseImpl();
+
+  @override
+  String toString() {
+    return 'WorkoutEvent.nextExercise()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$NextExerciseImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<Exercise> exercises, int durationSeconds)
+    startWorkout,
+    required TResult Function() tick,
+    required TResult Function() togglePause,
+    required TResult Function() stopWorkout,
+    required TResult Function() nextExercise,
+    required TResult Function() previousExercise,
+  }) {
+    return nextExercise();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(List<Exercise> exercises, int durationSeconds)?
+    startWorkout,
+    TResult? Function()? tick,
+    TResult? Function()? togglePause,
+    TResult? Function()? stopWorkout,
+    TResult? Function()? nextExercise,
+    TResult? Function()? previousExercise,
+  }) {
+    return nextExercise?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<Exercise> exercises, int durationSeconds)?
+    startWorkout,
+    TResult Function()? tick,
+    TResult Function()? togglePause,
+    TResult Function()? stopWorkout,
+    TResult Function()? nextExercise,
+    TResult Function()? previousExercise,
+    required TResult orElse(),
+  }) {
+    if (nextExercise != null) {
+      return nextExercise();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(StartWorkout value) startWorkout,
+    required TResult Function(Tick value) tick,
+    required TResult Function(TogglePause value) togglePause,
+    required TResult Function(StopWorkout value) stopWorkout,
+    required TResult Function(NextExercise value) nextExercise,
+    required TResult Function(PreviousExercise value) previousExercise,
+  }) {
+    return nextExercise(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(StartWorkout value)? startWorkout,
+    TResult? Function(Tick value)? tick,
+    TResult? Function(TogglePause value)? togglePause,
+    TResult? Function(StopWorkout value)? stopWorkout,
+    TResult? Function(NextExercise value)? nextExercise,
+    TResult? Function(PreviousExercise value)? previousExercise,
+  }) {
+    return nextExercise?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(StartWorkout value)? startWorkout,
+    TResult Function(Tick value)? tick,
+    TResult Function(TogglePause value)? togglePause,
+    TResult Function(StopWorkout value)? stopWorkout,
+    TResult Function(NextExercise value)? nextExercise,
+    TResult Function(PreviousExercise value)? previousExercise,
+    required TResult orElse(),
+  }) {
+    if (nextExercise != null) {
+      return nextExercise(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NextExercise implements WorkoutEvent {
+  const factory NextExercise() = _$NextExerciseImpl;
+}
+
+/// @nodoc
+abstract class _$$PreviousExerciseImplCopyWith<$Res> {
+  factory _$$PreviousExerciseImplCopyWith(
+    _$PreviousExerciseImpl value,
+    $Res Function(_$PreviousExerciseImpl) then,
+  ) = __$$PreviousExerciseImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$PreviousExerciseImplCopyWithImpl<$Res>
+    extends _$WorkoutEventCopyWithImpl<$Res, _$PreviousExerciseImpl>
+    implements _$$PreviousExerciseImplCopyWith<$Res> {
+  __$$PreviousExerciseImplCopyWithImpl(
+    _$PreviousExerciseImpl _value,
+    $Res Function(_$PreviousExerciseImpl) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of WorkoutEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$PreviousExerciseImpl implements PreviousExercise {
+  const _$PreviousExerciseImpl();
+
+  @override
+  String toString() {
+    return 'WorkoutEvent.previousExercise()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$PreviousExerciseImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<Exercise> exercises, int durationSeconds)
+    startWorkout,
+    required TResult Function() tick,
+    required TResult Function() togglePause,
+    required TResult Function() stopWorkout,
+    required TResult Function() nextExercise,
+    required TResult Function() previousExercise,
+  }) {
+    return previousExercise();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(List<Exercise> exercises, int durationSeconds)?
+    startWorkout,
+    TResult? Function()? tick,
+    TResult? Function()? togglePause,
+    TResult? Function()? stopWorkout,
+    TResult? Function()? nextExercise,
+    TResult? Function()? previousExercise,
+  }) {
+    return previousExercise?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<Exercise> exercises, int durationSeconds)?
+    startWorkout,
+    TResult Function()? tick,
+    TResult Function()? togglePause,
+    TResult Function()? stopWorkout,
+    TResult Function()? nextExercise,
+    TResult Function()? previousExercise,
+    required TResult orElse(),
+  }) {
+    if (previousExercise != null) {
+      return previousExercise();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(StartWorkout value) startWorkout,
+    required TResult Function(Tick value) tick,
+    required TResult Function(TogglePause value) togglePause,
+    required TResult Function(StopWorkout value) stopWorkout,
+    required TResult Function(NextExercise value) nextExercise,
+    required TResult Function(PreviousExercise value) previousExercise,
+  }) {
+    return previousExercise(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(StartWorkout value)? startWorkout,
+    TResult? Function(Tick value)? tick,
+    TResult? Function(TogglePause value)? togglePause,
+    TResult? Function(StopWorkout value)? stopWorkout,
+    TResult? Function(NextExercise value)? nextExercise,
+    TResult? Function(PreviousExercise value)? previousExercise,
+  }) {
+    return previousExercise?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(StartWorkout value)? startWorkout,
+    TResult Function(Tick value)? tick,
+    TResult Function(TogglePause value)? togglePause,
+    TResult Function(StopWorkout value)? stopWorkout,
+    TResult Function(NextExercise value)? nextExercise,
+    TResult Function(PreviousExercise value)? previousExercise,
+    required TResult orElse(),
+  }) {
+    if (previousExercise != null) {
+      return previousExercise(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PreviousExercise implements WorkoutEvent {
+  const factory PreviousExercise() = _$PreviousExerciseImpl;
 }

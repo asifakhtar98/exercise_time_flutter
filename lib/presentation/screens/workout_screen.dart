@@ -231,6 +231,17 @@ class WorkoutScreen extends StatelessWidget {
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
+                                // Previous Exercise
+                                IconButton(
+                                  icon: const Icon(Icons.skip_previous_rounded, size: 36),
+                                  color: Colors.white70,
+                                  onPressed: () {
+                                    context.read<WorkoutBloc>().add(
+                                      const WorkoutEvent.previousExercise(),
+                                    );
+                                  },
+                                ),
+                                const Gap(12),
                                 // Stop Workout
                                 IconButton(
                                   icon: const Icon(Icons.stop_rounded, size: 36),
@@ -242,7 +253,7 @@ class WorkoutScreen extends StatelessWidget {
                                     Navigator.of(context).pop();
                                   },
                                 ),
-                                const Gap(16),
+                                const Gap(12),
                                 // Play / Pause
                                 Container(
                                   decoration: const BoxDecoration(
@@ -261,6 +272,17 @@ class WorkoutScreen extends StatelessWidget {
                                       );
                                     },
                                   ),
+                                ),
+                                const Gap(12),
+                                // Next Exercise
+                                IconButton(
+                                  icon: const Icon(Icons.skip_next_rounded, size: 36),
+                                  color: Colors.white70,
+                                  onPressed: () {
+                                    context.read<WorkoutBloc>().add(
+                                      const WorkoutEvent.nextExercise(),
+                                    );
+                                  },
                                 ),
                               ],
                             ),

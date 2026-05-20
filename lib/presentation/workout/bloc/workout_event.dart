@@ -12,4 +12,6 @@ class WorkoutEvent with _$WorkoutEvent {
   const factory WorkoutEvent.tick() = Tick;
   const factory WorkoutEvent.togglePause() = TogglePause;
   const factory WorkoutEvent.stopWorkout() = StopWorkout;
+  const factory WorkoutEvent.nextExercise() = NextExercise;
+  const factory WorkoutEvent.previousExercise() = PreviousExercise;
 }

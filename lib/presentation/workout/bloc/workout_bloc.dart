@@ -58,6 +58,29 @@ class WorkoutBloc extends Bloc<WorkoutEvent, WorkoutState> {
       _timerSubscription?.cancel();
       emit(const WorkoutState.initial());
     });
+
+    on<NextExercise>((event, emit) {
+      final currentState = state;
+      if (currentState is WorkoutActive) {
+        final nextIndex = (currentState.currentExerciseIndex + 1) % currentState.exercises.length;
+        emit(currentState.copyWith(
+          currentExerciseIndex: nextIndex,
+          secondsRemaining: currentState.durationSeconds,
+        ));
+      }
+    });
+
+    on<PreviousExercise>((event, emit) {
+      final currentState = state;
+      if (currentState is WorkoutActive) {
+        final prevIndex = (currentState.currentExerciseIndex - 1 + currentState.exercises.length) %
+            currentState.exercises.length;
+        emit(currentState.copyWith(
+          currentExerciseIndex: prevIndex,
+          secondsRemaining: currentState.durationSeconds,
+        ));
+      }
+    });
   }
 
   void _startTimer() {
