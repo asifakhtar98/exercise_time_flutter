@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'injection.dart';
-import 'presentation/screens/setup_screen.dart';
+import 'presentation/router/app_router.dart';
 import 'presentation/settings/bloc/settings_bloc.dart';
 import 'presentation/settings/bloc/settings_event.dart';
+import 'presentation/theme/app_theme.dart';
 import 'presentation/workout/bloc/workout_bloc.dart';
 
 void main() async {
@@ -27,20 +27,11 @@ class MyApp extends StatelessWidget {
           create: (context) => getIt<WorkoutBloc>(),
         ),
       ],
-      child: MaterialApp(
+      child: MaterialApp.router(
         title: 'Exercise Time',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color(0xFFFFC107), // Amber Accent
-            brightness: Brightness.dark,
-          ),
-          textTheme: GoogleFonts.interTextTheme(
-            ThemeData.dark().textTheme,
-          ),
-        ),
-        home: const SetupScreen(),
+        theme: AppTheme.light,
+        routerConfig: AppRouter.router,
       ),
     );
   }
