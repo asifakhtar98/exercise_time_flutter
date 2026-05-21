@@ -76,6 +76,7 @@ class WorkoutBloc extends Bloc<WorkoutEvent, WorkoutState> {
 
   void _onStop(StopWorkout event, Emitter<WorkoutState> emit) {
     _stopTimer();
+    _audioService.stop();
     emit(const WorkoutState.initial());
   }
 
@@ -127,6 +128,7 @@ class WorkoutBloc extends Bloc<WorkoutEvent, WorkoutState> {
   @override
   Future<void> close() {
     _stopTimer();
+    _audioService.stop();
     return super.close();
   }
 }

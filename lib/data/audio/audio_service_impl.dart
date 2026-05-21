@@ -18,4 +18,13 @@ class AudioServiceImpl implements AudioService {
       log('Audio playback error: $e', name: 'AudioService');
     }
   }
+
+  @override
+  Future<void> stop() async {
+    try {
+      await _player.stop();
+    } catch (e) {
+      log('Audio stop error: $e', name: 'AudioService');
+    }
+  }
 }

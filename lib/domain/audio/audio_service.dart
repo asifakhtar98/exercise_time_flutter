@@ -5,4 +5,7 @@
 abstract class AudioService {
   /// Plays a short beep/chime to signal an exercise transition.
   Future<void> playTransitionSound();
+
+  /// Stops any currently playing audio and releases resources.
+  Future<void> stop();
 }
