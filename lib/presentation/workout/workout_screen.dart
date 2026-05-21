@@ -5,6 +5,7 @@ import 'package:gap/gap.dart';
 import '../router/app_router.dart';
 import '../theme/app_theme.dart';
 import 'bloc/workout_bloc.dart';
+import 'bloc/workout_event.dart';
 import 'bloc/workout_state.dart';
 import 'widgets/active_workout_view.dart';
 
@@ -12,8 +13,27 @@ import 'widgets/active_workout_view.dart';
 ///
 /// Composes [ActiveWorkoutView] and handles navigation guards
 /// (redirect to setup if no active workout, redirect on finish).
-class WorkoutScreen extends StatelessWidget {
+class WorkoutScreen extends StatefulWidget {
   const WorkoutScreen({super.key});
+
+  @override
+  State<WorkoutScreen> createState() => _WorkoutScreenState();
+}
+
+class _WorkoutScreenState extends State<WorkoutScreen> {
+  late WorkoutBloc _workoutBloc;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _workoutBloc = context.read<WorkoutBloc>();
+  }
+
+  @override
+  void dispose() {
+    _workoutBloc.add(const WorkoutEvent.stopWorkout());
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

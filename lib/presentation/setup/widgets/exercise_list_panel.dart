@@ -25,38 +25,45 @@ class ExerciseListPanel extends StatelessWidget {
             style: AppTextStyles.label(color: colors.onSurfaceVariant),
           ),
         ),
-        ...exercises.map((exercise) {
-          return Container(
-            margin: const EdgeInsets.only(bottom: 8),
-            decoration: BoxDecoration(
-              color: colors.surface,
-              borderRadius: BorderRadius.circular(ext.cardRadius * 0.67),
-              border: Border.all(color: colors.outline),
-            ),
-            child: ListTile(
-              contentPadding: const EdgeInsets.all(12),
-              leading: ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
-                  exercise.imagePath,
-                  width: 50,
-                  height: 50,
-                  fit: BoxFit.cover,
+        Expanded(
+          child: ListView.builder(
+            padding: EdgeInsets.zero,
+            itemCount: exercises.length,
+            itemBuilder: (context, index) {
+              final exercise = exercises[index];
+              return Container(
+                margin: const EdgeInsets.only(bottom: 8),
+                decoration: BoxDecoration(
+                  color: colors.surface,
+                  borderRadius: BorderRadius.circular(ext.cardRadius * 0.67),
+                  border: Border.all(color: colors.outline),
                 ),
-              ),
-              title: Text(
-                exercise.name,
-                style: AppTextStyles.labelBold(color: colors.onSurface),
-              ),
-              subtitle: Text(
-                exercise.description,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(color: colors.onSurfaceVariant, fontSize: 12),
-              ),
-            ),
-          );
-        }),
+                child: ListTile(
+                  contentPadding: const EdgeInsets.all(12),
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.asset(
+                      exercise.imagePath,
+                      width: 50,
+                      height: 50,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  title: Text(
+                    exercise.name,
+                    style: AppTextStyles.labelBold(color: colors.onSurface),
+                  ),
+                  subtitle: Text(
+                    exercise.description,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(color: colors.onSurfaceVariant, fontSize: 12),
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
       ],
     );
   }

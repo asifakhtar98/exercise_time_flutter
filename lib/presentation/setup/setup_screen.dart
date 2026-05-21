@@ -27,34 +27,34 @@ class SetupScreen extends StatelessWidget {
                 return settingsState.maybeWhen(
                   loaded: (settings) {
                     return Scaffold(
-                      body: Center(
-                        child: SingleChildScrollView(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 40.0,
-                              vertical: 20.0,
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                // Left Section — Settings & Start
-                                Expanded(
-                                  flex: 5,
+                      body: SafeArea(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 40.0,
+                            vertical: 20.0,
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              // Left Section — Settings & Start
+                              Expanded(
+                                flex: 5,
+                                child: Center(
                                   child: SettingsCard(
                                     duration: settings.durationSeconds,
                                     exercises: exercises,
                                   ),
                                 ),
-                                const Gap(40),
-                                // Right Section — Exercise Routine
-                                Expanded(
-                                  flex: 4,
-                                  child: ExerciseListPanel(
-                                    exercises: exercises,
-                                  ),
+                              ),
+                              const Gap(40),
+                              // Right Section — Exercise Routine
+                              Expanded(
+                                flex: 4,
+                                child: ExerciseListPanel(
+                                  exercises: exercises,
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ),

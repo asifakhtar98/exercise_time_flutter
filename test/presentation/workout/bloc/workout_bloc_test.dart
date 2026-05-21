@@ -43,6 +43,7 @@ void main() {
     when(() => mockTimer.start()).thenReturn(null);
     when(() => mockTimer.stop()).thenReturn(null);
     when(() => mockAudio.playTransitionSound()).thenAnswer((_) async {});
+    when(() => mockAudio.stop()).thenAnswer((_) async {});
   });
 
   tearDown(() {
