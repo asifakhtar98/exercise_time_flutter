@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:injectable/injectable.dart';
 import '../../domain/audio/audio_service.dart';
@@ -13,7 +15,7 @@ class AudioServiceImpl implements AudioService {
       await _player.play(AssetSource('audio/beep.wav'));
     } catch (e) {
       // Silently catch audio errors (common on web if not interacted first)
-      print('Audio playback error: $e');
+      log('Audio playback error: $e', name: 'AudioService');
     }
   }
 }

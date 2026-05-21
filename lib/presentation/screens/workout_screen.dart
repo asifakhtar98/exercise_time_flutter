@@ -13,11 +13,9 @@ class WorkoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: OrientationBuilder(
-        builder: (context, orientation) {
-          // Fallback check for landscape orientation
-          final mediaQuery = MediaQuery.of(context);
-          final isLandscape = mediaQuery.size.width > mediaQuery.size.height;
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          final isLandscape = constraints.maxWidth > constraints.maxHeight;
 
           if (!isLandscape) {
             return _buildRotatePrompt(context);
@@ -70,6 +68,8 @@ class WorkoutScreen extends StatelessWidget {
       listener: (context, state) {
         state.maybeWhen(
           finished: () => const SetupRoute().go(context),
+          // Redirect to setup if user lands on /workout without active state
+          initial: () => const SetupRoute().go(context),
           orElse: () {},
         );
       },
@@ -90,9 +90,7 @@ class WorkoutScreen extends StatelessWidget {
               isPaused: isPaused,
             );
           },
-          orElse: () => const Scaffold(
-            body: Center(child: CircularProgressIndicator()),
-          ),
+          orElse: () => const Center(child: CircularProgressIndicator()),
         );
       },
     );

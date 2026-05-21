@@ -15,10 +15,12 @@ import '../workout/bloc/workout_event.dart';
 class SetupScreen extends StatelessWidget {
   const SetupScreen({super.key});
 
+  static final List<Exercise> _exercises =
+      getIt<ExerciseRepository>().getExercises();
+
   @override
   Widget build(BuildContext context) {
-    final exerciseRepository = getIt<ExerciseRepository>();
-    final exercises = exerciseRepository.getExercises();
+    final exercises = _exercises;
 
     return BlocBuilder<SettingsBloc, SettingsState>(
       builder: (context, state) {

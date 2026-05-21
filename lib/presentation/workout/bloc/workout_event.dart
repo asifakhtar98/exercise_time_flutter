@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import '../../../../domain/exercise/exercise.dart';
+import 'package:exercise_time/domain/exercise/exercise.dart';
 
 part 'workout_event.freezed.dart';
 

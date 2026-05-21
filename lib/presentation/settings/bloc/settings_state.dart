@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import '../../../../domain/settings/timer_settings.dart';
+import 'package:exercise_time/domain/settings/timer_settings.dart';
 
 part 'settings_state.freezed.dart';
 

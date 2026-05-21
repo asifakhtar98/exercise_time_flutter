@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import '../../../../domain/settings/settings_repository.dart';
-import '../../../../domain/settings/timer_settings.dart';
+import 'package:exercise_time/domain/settings/settings_repository.dart';
+import 'package:exercise_time/domain/settings/timer_settings.dart';
 import 'settings_event.dart';
 import 'settings_state.dart';
 
@@ -23,11 +23,10 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
     on<UpdateDuration>((event, emit) async {
       final currentState = state;
       if (currentState is SettingsLoaded) {
-        emit(const SettingsState.loading());
+        final newSettings = TimerSettings(durationSeconds: event.durationSeconds);
+        emit(SettingsState.loaded(settings: newSettings));
         try {
-          final newSettings = TimerSettings(durationSeconds: event.durationSeconds);
           await _settingsRepository.saveSettings(newSettings);
-          emit(SettingsState.loaded(settings: newSettings));
         } catch (e) {
           emit(SettingsState.error(message: e.toString()));
         }

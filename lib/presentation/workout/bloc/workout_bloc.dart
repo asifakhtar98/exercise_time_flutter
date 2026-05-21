@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import '../../../../domain/audio/audio_service.dart';
+import 'package:exercise_time/domain/audio/audio_service.dart';
 import 'workout_event.dart';
 import 'workout_state.dart';
 
