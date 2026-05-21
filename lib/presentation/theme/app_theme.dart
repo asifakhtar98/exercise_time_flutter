@@ -160,10 +160,7 @@ abstract final class AppTextStyles {
     );
   }
 
-  static TextStyle labelBold({
-    required Color color,
-    double fontSize = 14,
-  }) {
+  static TextStyle labelBold({required Color color, double fontSize = 14}) {
     return GoogleFonts.outfit(
       fontSize: fontSize,
       fontWeight: FontWeight.bold,

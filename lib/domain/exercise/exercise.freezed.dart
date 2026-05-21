@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,203 +9,272 @@ part of 'exercise.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
 /// @nodoc
 mixin _$Exercise {
-  String get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String get imagePath => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
 
-  /// Create a copy of Exercise
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $ExerciseCopyWith<Exercise> get copyWith =>
-      throw _privateConstructorUsedError;
+ String get id; String get name; String get imagePath; String get description;
+/// Create a copy of Exercise
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ExerciseCopyWith<Exercise> get copyWith => _$ExerciseCopyWithImpl<Exercise>(this as Exercise, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Exercise&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.imagePath, imagePath) || other.imagePath == imagePath)&&(identical(other.description, description) || other.description == description));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,id,name,imagePath,description);
+
+@override
+String toString() {
+  return 'Exercise(id: $id, name: $name, imagePath: $imagePath, description: $description)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $ExerciseCopyWith<$Res> {
-  factory $ExerciseCopyWith(Exercise value, $Res Function(Exercise) then) =
-      _$ExerciseCopyWithImpl<$Res, Exercise>;
-  @useResult
-  $Res call({String id, String name, String imagePath, String description});
-}
+abstract mixin class $ExerciseCopyWith<$Res>  {
+  factory $ExerciseCopyWith(Exercise value, $Res Function(Exercise) _then) = _$ExerciseCopyWithImpl;
+@useResult
+$Res call({
+ String id, String name, String imagePath, String description
+});
 
+
+
+
+}
 /// @nodoc
-class _$ExerciseCopyWithImpl<$Res, $Val extends Exercise>
+class _$ExerciseCopyWithImpl<$Res>
     implements $ExerciseCopyWith<$Res> {
-  _$ExerciseCopyWithImpl(this._value, this._then);
+  _$ExerciseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Exercise _self;
+  final $Res Function(Exercise) _then;
 
-  /// Create a copy of Exercise
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? imagePath = null,
-    Object? description = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            id: null == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                      as String,
-            name: null == name
-                ? _value.name
-                : name // ignore: cast_nullable_to_non_nullable
-                      as String,
-            imagePath: null == imagePath
-                ? _value.imagePath
-                : imagePath // ignore: cast_nullable_to_non_nullable
-                      as String,
-            description: null == description
-                ? _value.description
-                : description // ignore: cast_nullable_to_non_nullable
-                      as String,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of Exercise
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? name = null,Object? imagePath = null,Object? description = null,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,imagePath: null == imagePath ? _self.imagePath : imagePath // ignore: cast_nullable_to_non_nullable
+as String,description: null == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [Exercise].
+extension ExercisePatterns on Exercise {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Exercise value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Exercise() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Exercise value)  $default,){
+final _that = this;
+switch (_that) {
+case _Exercise():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Exercise value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Exercise() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String name,  String imagePath,  String description)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Exercise() when $default != null:
+return $default(_that.id,_that.name,_that.imagePath,_that.description);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String name,  String imagePath,  String description)  $default,) {final _that = this;
+switch (_that) {
+case _Exercise():
+return $default(_that.id,_that.name,_that.imagePath,_that.description);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String name,  String imagePath,  String description)?  $default,) {final _that = this;
+switch (_that) {
+case _Exercise() when $default != null:
+return $default(_that.id,_that.name,_that.imagePath,_that.description);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
-abstract class _$$ExerciseImplCopyWith<$Res>
-    implements $ExerciseCopyWith<$Res> {
-  factory _$$ExerciseImplCopyWith(
-    _$ExerciseImpl value,
-    $Res Function(_$ExerciseImpl) then,
-  ) = __$$ExerciseImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String id, String name, String imagePath, String description});
+
+
+class _Exercise implements Exercise {
+  const _Exercise({required this.id, required this.name, required this.imagePath, required this.description});
+  
+
+@override final  String id;
+@override final  String name;
+@override final  String imagePath;
+@override final  String description;
+
+/// Create a copy of Exercise
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ExerciseCopyWith<_Exercise> get copyWith => __$ExerciseCopyWithImpl<_Exercise>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Exercise&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.imagePath, imagePath) || other.imagePath == imagePath)&&(identical(other.description, description) || other.description == description));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,id,name,imagePath,description);
+
+@override
+String toString() {
+  return 'Exercise(id: $id, name: $name, imagePath: $imagePath, description: $description)';
+}
+
+
 }
 
 /// @nodoc
-class __$$ExerciseImplCopyWithImpl<$Res>
-    extends _$ExerciseCopyWithImpl<$Res, _$ExerciseImpl>
-    implements _$$ExerciseImplCopyWith<$Res> {
-  __$$ExerciseImplCopyWithImpl(
-    _$ExerciseImpl _value,
-    $Res Function(_$ExerciseImpl) _then,
-  ) : super(_value, _then);
+abstract mixin class _$ExerciseCopyWith<$Res> implements $ExerciseCopyWith<$Res> {
+  factory _$ExerciseCopyWith(_Exercise value, $Res Function(_Exercise) _then) = __$ExerciseCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String name, String imagePath, String description
+});
 
-  /// Create a copy of Exercise
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? imagePath = null,
-    Object? description = null,
-  }) {
-    return _then(
-      _$ExerciseImpl(
-        id: null == id
-            ? _value.id
-            : id // ignore: cast_nullable_to_non_nullable
-                  as String,
-        name: null == name
-            ? _value.name
-            : name // ignore: cast_nullable_to_non_nullable
-                  as String,
-        imagePath: null == imagePath
-            ? _value.imagePath
-            : imagePath // ignore: cast_nullable_to_non_nullable
-                  as String,
-        description: null == description
-            ? _value.description
-            : description // ignore: cast_nullable_to_non_nullable
-                  as String,
-      ),
-    );
-  }
+
+
+
 }
-
 /// @nodoc
+class __$ExerciseCopyWithImpl<$Res>
+    implements _$ExerciseCopyWith<$Res> {
+  __$ExerciseCopyWithImpl(this._self, this._then);
 
-class _$ExerciseImpl implements _Exercise {
-  const _$ExerciseImpl({
-    required this.id,
-    required this.name,
-    required this.imagePath,
-    required this.description,
-  });
+  final _Exercise _self;
+  final $Res Function(_Exercise) _then;
 
-  @override
-  final String id;
-  @override
-  final String name;
-  @override
-  final String imagePath;
-  @override
-  final String description;
-
-  @override
-  String toString() {
-    return 'Exercise(id: $id, name: $name, imagePath: $imagePath, description: $description)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ExerciseImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.imagePath, imagePath) ||
-                other.imagePath == imagePath) &&
-            (identical(other.description, description) ||
-                other.description == description));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, name, imagePath, description);
-
-  /// Create a copy of Exercise
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ExerciseImplCopyWith<_$ExerciseImpl> get copyWith =>
-      __$$ExerciseImplCopyWithImpl<_$ExerciseImpl>(this, _$identity);
+/// Create a copy of Exercise
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = null,Object? imagePath = null,Object? description = null,}) {
+  return _then(_Exercise(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,imagePath: null == imagePath ? _self.imagePath : imagePath // ignore: cast_nullable_to_non_nullable
+as String,description: null == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-abstract class _Exercise implements Exercise {
-  const factory _Exercise({
-    required final String id,
-    required final String name,
-    required final String imagePath,
-    required final String description,
-  }) = _$ExerciseImpl;
 
-  @override
-  String get id;
-  @override
-  String get name;
-  @override
-  String get imagePath;
-  @override
-  String get description;
-
-  /// Create a copy of Exercise
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ExerciseImplCopyWith<_$ExerciseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
+
+// dart format on

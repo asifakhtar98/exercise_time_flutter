@@ -3,8 +3,9 @@ import 'package:exercise_time/domain/exercise/exercise.dart';
 
 part 'workout_event.freezed.dart';
 
+/// Events dispatched to [WorkoutBloc].
 @freezed
-class WorkoutEvent with _$WorkoutEvent {
+abstract class WorkoutEvent with _$WorkoutEvent {
   const factory WorkoutEvent.startWorkout({
     required List<Exercise> exercises,
     required int durationSeconds,

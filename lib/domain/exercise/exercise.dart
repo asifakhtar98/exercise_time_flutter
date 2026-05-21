@@ -2,8 +2,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'exercise.freezed.dart';
 
+/// A single exercise in the catalog.
 @freezed
-class Exercise with _$Exercise {
+abstract class Exercise with _$Exercise {
   const factory Exercise({
     required String id,
     required String name,

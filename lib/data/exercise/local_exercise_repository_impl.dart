@@ -130,4 +130,3 @@ class LocalExerciseRepositoryImpl implements ExerciseRepository {
     ];
   }
 }
-

@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../screens/setup_screen.dart';
-import '../screens/workout_screen.dart';
+import '../setup/setup_screen.dart';
+import '../workout/workout_screen.dart';
 
 part 'app_router.g.dart';
 
 /// Type-safe route for the setup/home screen.
 @TypedGoRoute<SetupRoute>(
   path: '/',
-  routes: [
-    TypedGoRoute<WorkoutRoute>(path: 'workout'),
-  ],
+  routes: [TypedGoRoute<WorkoutRoute>(path: 'workout')],
 )
 @immutable
-class SetupRoute extends GoRouteData with _$SetupRoute {
+class SetupRoute extends GoRouteData with $SetupRoute {
   const SetupRoute();
 
   @override
@@ -24,7 +22,7 @@ class SetupRoute extends GoRouteData with _$SetupRoute {
 
 /// Type-safe route for the active workout screen.
 @immutable
-class WorkoutRoute extends GoRouteData with _$WorkoutRoute {
+class WorkoutRoute extends GoRouteData with $WorkoutRoute {
   const WorkoutRoute();
 
   @override

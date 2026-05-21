@@ -10,14 +10,13 @@ List<RouteBase> get $appRoutes => [$setupRoute];
 
 RouteBase get $setupRoute => GoRouteData.$route(
   path: '/',
-
-  factory: _$SetupRoute._fromState,
+  factory: $SetupRoute._fromState,
   routes: [
-    GoRouteData.$route(path: 'workout', factory: _$WorkoutRoute._fromState),
+    GoRouteData.$route(path: 'workout', factory: $WorkoutRoute._fromState),
   ],
 );
 
-mixin _$SetupRoute on GoRouteData {
+mixin $SetupRoute on GoRouteData {
   static SetupRoute _fromState(GoRouterState state) => const SetupRoute();
 
   @override
@@ -37,7 +36,7 @@ mixin _$SetupRoute on GoRouteData {
   void replace(BuildContext context) => context.replace(location);
 }
 
-mixin _$WorkoutRoute on GoRouteData {
+mixin $WorkoutRoute on GoRouteData {
   static WorkoutRoute _fromState(GoRouterState state) => const WorkoutRoute();
 
   @override

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'injection.dart';
+import 'presentation/exercise_list/bloc/exercise_list_bloc.dart';
+import 'presentation/exercise_list/bloc/exercise_list_event.dart';
 import 'presentation/router/app_router.dart';
 import 'presentation/settings/bloc/settings_bloc.dart';
 import 'presentation/settings/bloc/settings_event.dart';
@@ -20,12 +23,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
+        BlocProvider<ExerciseListBloc>(
+          create: (context) =>
+              getIt<ExerciseListBloc>()..add(const ExerciseListEvent.load()),
+        ),
         BlocProvider<SettingsBloc>(
-          create: (context) => getIt<SettingsBloc>()..add(const SettingsEvent.loadSettings()),
+          create: (context) =>
+              getIt<SettingsBloc>()..add(const SettingsEvent.loadSettings()),
         ),
-        BlocProvider<WorkoutBloc>(
-          create: (context) => getIt<WorkoutBloc>(),
-        ),
+        BlocProvider<WorkoutBloc>(create: (context) => getIt<WorkoutBloc>()),
       ],
       child: MaterialApp.router(
         title: 'Exercise Time',

@@ -3,8 +3,9 @@ import 'package:exercise_time/domain/exercise/exercise.dart';
 
 part 'workout_state.freezed.dart';
 
+/// States emitted by [WorkoutBloc].
 @freezed
-class WorkoutState with _$WorkoutState {
+abstract class WorkoutState with _$WorkoutState {
   const factory WorkoutState.initial() = WorkoutInitial;
   const factory WorkoutState.active({
     required List<Exercise> exercises,
